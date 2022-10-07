@@ -1,0 +1,3 @@
+/home/mirexcool/Desktop/2022_linux_mac/Framework/cmake-build-debug/CMakeFiles/FrameworkRelease.dir
+/home/mirexcool/Desktop/2022_linux_mac/Framework/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mirexcool/Desktop/2022_linux_mac/Framework/cmake-build-debug/CMakeFiles/rebuild_cache.dir
