@@ -11,8 +11,8 @@
 # =============================================================================
 
 # =============================================================================
-# Project: Framework
-# Configurations: Release
+# Project: arcanoid
+# Configurations: Debug
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Release
+CONFIGURATION = Debug
 # =============================================================================
 # Include auxiliary files.
 
@@ -39,59 +39,49 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/mirexcool/CLionProjects/arcanoid/Framework/cmake-build-debug/
+cmake_ninja_workdir = /home/mirexcool/CLionProjects/arcanoid/cmake-build-debug/
 # =============================================================================
-# Object build statements for SHARED_LIBRARY target FrameworkRelease
+# Object build statements for EXECUTABLE target arcanoid
 
 
 #############################################
-# Order-only phony target for FrameworkRelease
+# Order-only phony target for arcanoid
 
-build cmake_object_order_depends_target_FrameworkRelease: phony || CMakeFiles/FrameworkRelease.dir
+build cmake_object_order_depends_target_arcanoid: phony || CMakeFiles/arcanoid.dir
 
-build CMakeFiles/FrameworkRelease.dir/src/launch.cpp.o: CXX_COMPILER__FrameworkRelease_Release /home/mirexcool/CLionProjects/arcanoid/Framework/src/launch.cpp || cmake_object_order_depends_target_FrameworkRelease
-  DEFINES = -DFrameworkRelease_EXPORTS
-  DEP_FILE = CMakeFiles/FrameworkRelease.dir/src/launch.cpp.o.d
-  FLAGS = -O3 -DNDEBUG -fPIC -std=gnu++11
-  INCLUDES = -I/home/mirexcool/CLionProjects/arcanoid/Framework/.
-  OBJECT_DIR = CMakeFiles/FrameworkRelease.dir
-  OBJECT_FILE_DIR = CMakeFiles/FrameworkRelease.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/FrameworkRelease.dir/
-  TARGET_PDB = libFrameworkRelease.pdb
+build CMakeFiles/arcanoid.dir/Project/game.cpp.o: CXX_COMPILER__arcanoid_Debug /home/mirexcool/CLionProjects/arcanoid/Project/game.cpp || cmake_object_order_depends_target_arcanoid
+  DEP_FILE = CMakeFiles/arcanoid.dir/Project/game.cpp.o.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -I/home/mirexcool/CLionProjects/arcanoid/Framework
+  OBJECT_DIR = CMakeFiles/arcanoid.dir
+  OBJECT_FILE_DIR = CMakeFiles/arcanoid.dir/Project
+  TARGET_COMPILE_PDB = CMakeFiles/arcanoid.dir/
+  TARGET_PDB = arcanoid.pdb
 
 
 # =============================================================================
-# Link build statements for SHARED_LIBRARY target FrameworkRelease
+# Link build statements for EXECUTABLE target arcanoid
 
 
 #############################################
-# Link the shared library libFrameworkRelease.so.0.0.1
+# Link the executable arcanoid
 
-build libFrameworkRelease.so.0.0.1: CXX_SHARED_LIBRARY_LINKER__FrameworkRelease_Release CMakeFiles/FrameworkRelease.dir/src/launch.cpp.o
-  LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
-  OBJECT_DIR = CMakeFiles/FrameworkRelease.dir
+build arcanoid: CXX_EXECUTABLE_LINKER__arcanoid_Debug CMakeFiles/arcanoid.dir/Project/game.cpp.o | ../Framework/libFrameworkRelease.so
+  FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/mirexcool/CLionProjects/arcanoid/Framework  ../Framework/libFrameworkRelease.so  -lSDL2  -lSDL2_image
+  OBJECT_DIR = CMakeFiles/arcanoid.dir
   POST_BUILD = :
   PRE_LINK = :
-  SONAME = libFrameworkRelease.so.0.0.1
-  SONAME_FLAG = -Wl,-soname,
-  TARGET_COMPILE_PDB = CMakeFiles/FrameworkRelease.dir/
-  TARGET_FILE = libFrameworkRelease.so.0.0.1
-  TARGET_PDB = libFrameworkRelease.pdb
-
-
-#############################################
-# Create library symlink libFrameworkRelease.so
-
-build libFrameworkRelease.so: CMAKE_SYMLINK_LIBRARY libFrameworkRelease.so.0.0.1
-  POST_BUILD = :
-  SONAME = libFrameworkRelease.so.0.0.1
+  TARGET_COMPILE_PDB = CMakeFiles/arcanoid.dir/
+  TARGET_FILE = arcanoid
+  TARGET_PDB = arcanoid.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/mirexcool/CLionProjects/arcanoid/Framework/cmake-build-debug && /home/mirexcool/Desktop/clion-2022.2.3/bin/cmake/linux/bin/ccmake -S/home/mirexcool/CLionProjects/arcanoid/Framework -B/home/mirexcool/CLionProjects/arcanoid/Framework/cmake-build-debug
+  COMMAND = cd /home/mirexcool/CLionProjects/arcanoid/cmake-build-debug && /home/mirexcool/Desktop/clion-2022.2.3/bin/cmake/linux/bin/ccmake -S/home/mirexcool/CLionProjects/arcanoid -B/home/mirexcool/CLionProjects/arcanoid/cmake-build-debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -103,7 +93,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/mirexcool/CLionProjects/arcanoid/Framework/cmake-build-debug && /home/mirexcool/Desktop/clion-2022.2.3/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/mirexcool/CLionProjects/arcanoid/Framework -B/home/mirexcool/CLionProjects/arcanoid/Framework/cmake-build-debug
+  COMMAND = cd /home/mirexcool/CLionProjects/arcanoid/cmake-build-debug && /home/mirexcool/Desktop/clion-2022.2.3/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/mirexcool/CLionProjects/arcanoid -B/home/mirexcool/CLionProjects/arcanoid/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -113,17 +103,15 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build FrameworkRelease: phony libFrameworkRelease.so
-
 # =============================================================================
 # Folder targets.
 
 # =============================================================================
 
 #############################################
-# Folder: /home/mirexcool/CLionProjects/arcanoid/Framework/cmake-build-debug
+# Folder: /home/mirexcool/CLionProjects/arcanoid/cmake-build-debug
 
-build all: phony libFrameworkRelease.so
+build all: phony arcanoid
 
 # =============================================================================
 # Built-in targets

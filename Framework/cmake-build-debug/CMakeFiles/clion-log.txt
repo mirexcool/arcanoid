@@ -1,17 +1,18 @@
-/home/mirexcool/Desktop/clion-2022.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/mirexcool/Desktop/clion-2022.2.3/bin/ninja/linux/ninja -G Ninja -S /home/mirexcool/Desktop/2022_linux_mac/Framework -B /home/mirexcool/Desktop/2022_linux_mac/Framework/cmake-build-debug
--- The C compiler identification is GNU 9.4.0
--- The CXX compiler identification is GNU 9.4.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /usr/bin/cc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /usr/bin/c++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
-SDL2 library found in /usr/lib/x86_64-linux-gnu/libSDL2.so
+/home/mirexcool/Desktop/clion-2022.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/mirexcool/Desktop/clion-2022.2.3/bin/ninja/linux/ninja -G Ninja -S /home/mirexcool/CLionProjects/arcanoid/Framework -B /home/mirexcool/CLionProjects/arcanoid/Framework/cmake-build-debug
 -- Configuring done
--- Generating done
--- Build files have been written to: /home/mirexcool/Desktop/2022_linux_mac/Framework/cmake-build-debug
+CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
+Please set them or make sure they are set and tested correctly in the CMake files:
+FrameworkReleaseLib
+    linked by target "arcanoid" in directory /home/mirexcool/CLionProjects/arcanoid/Framework
+
+CMake Error at CMakeLists.txt:6 (add_executable):
+  Cannot find source file:
+
+    Project/game.cpp
+
+
+CMake Error at CMakeLists.txt:6 (add_executable):
+  No SOURCES given to target: arcanoid
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
