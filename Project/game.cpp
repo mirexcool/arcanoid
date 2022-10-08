@@ -52,7 +52,7 @@ class MyFramework : public Framework {
     //ball
     const int BALL_RADIUS = 10;
     const double BALL_SPEED = 5;
-
+    bool ballIsMoving = false;
     //mouse
     int mouseX, mouseY;
     int ballToMove;
@@ -308,8 +308,9 @@ public:
     }
 
     virtual void onMouseButtonClick(FRMouseButton button, bool isReleased) {
-        if (button == FRMouseButton::LEFT && isReleased) {
+        if (button == FRMouseButton::LEFT && isReleased && !ballIsMoving) {
             initBallSpeed(0, true);
+            ballIsMoving = true;
         }
 
     }

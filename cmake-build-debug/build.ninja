@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/mirexcool/CLionProjects/arcanoid/cmake-build-debug/
+cmake_ninja_workdir = /home/mirexcool/CLionProjects/arcanoid777/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target arcanoid
 
@@ -49,10 +49,10 @@ cmake_ninja_workdir = /home/mirexcool/CLionProjects/arcanoid/cmake-build-debug/
 
 build cmake_object_order_depends_target_arcanoid: phony || CMakeFiles/arcanoid.dir
 
-build CMakeFiles/arcanoid.dir/Project/game.cpp.o: CXX_COMPILER__arcanoid_Debug /home/mirexcool/CLionProjects/arcanoid/Project/game.cpp || cmake_object_order_depends_target_arcanoid
+build CMakeFiles/arcanoid.dir/Project/game.cpp.o: CXX_COMPILER__arcanoid_Debug /home/mirexcool/CLionProjects/arcanoid777/Project/game.cpp || cmake_object_order_depends_target_arcanoid
   DEP_FILE = CMakeFiles/arcanoid.dir/Project/game.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/home/mirexcool/CLionProjects/arcanoid/Framework
+  INCLUDES = -I/home/mirexcool/CLionProjects/arcanoid777/Framework
   OBJECT_DIR = CMakeFiles/arcanoid.dir
   OBJECT_FILE_DIR = CMakeFiles/arcanoid.dir/Project
   TARGET_COMPILE_PDB = CMakeFiles/arcanoid.dir/
@@ -68,7 +68,7 @@ build CMakeFiles/arcanoid.dir/Project/game.cpp.o: CXX_COMPILER__arcanoid_Debug /
 
 build arcanoid: CXX_EXECUTABLE_LINKER__arcanoid_Debug CMakeFiles/arcanoid.dir/Project/game.cpp.o | ../Framework/libFrameworkRelease.so
   FLAGS = -g
-  LINK_LIBRARIES = -Wl,-rpath,/home/mirexcool/CLionProjects/arcanoid/Framework  ../Framework/libFrameworkRelease.so  -lSDL2  -lSDL2_image
+  LINK_LIBRARIES = -Wl,-rpath,/home/mirexcool/CLionProjects/arcanoid777/Framework  ../Framework/libFrameworkRelease.so  -lSDL2  -lSDL2_image
   OBJECT_DIR = CMakeFiles/arcanoid.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -81,7 +81,7 @@ build arcanoid: CXX_EXECUTABLE_LINKER__arcanoid_Debug CMakeFiles/arcanoid.dir/Pr
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/mirexcool/CLionProjects/arcanoid/cmake-build-debug && /home/mirexcool/Desktop/clion-2022.2.3/bin/cmake/linux/bin/ccmake -S/home/mirexcool/CLionProjects/arcanoid -B/home/mirexcool/CLionProjects/arcanoid/cmake-build-debug
+  COMMAND = cd /home/mirexcool/CLionProjects/arcanoid777/cmake-build-debug && /home/mirexcool/Desktop/clion-2022.2.3/bin/cmake/linux/bin/ccmake -S/home/mirexcool/CLionProjects/arcanoid777 -B/home/mirexcool/CLionProjects/arcanoid777/cmake-build-debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -93,7 +93,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/mirexcool/CLionProjects/arcanoid/cmake-build-debug && /home/mirexcool/Desktop/clion-2022.2.3/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/mirexcool/CLionProjects/arcanoid -B/home/mirexcool/CLionProjects/arcanoid/cmake-build-debug
+  COMMAND = cd /home/mirexcool/CLionProjects/arcanoid777/cmake-build-debug && /home/mirexcool/Desktop/clion-2022.2.3/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/mirexcool/CLionProjects/arcanoid777 -B/home/mirexcool/CLionProjects/arcanoid777/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -109,7 +109,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /home/mirexcool/CLionProjects/arcanoid/cmake-build-debug
+# Folder: /home/mirexcool/CLionProjects/arcanoid777/cmake-build-debug
 
 build all: phony arcanoid
 

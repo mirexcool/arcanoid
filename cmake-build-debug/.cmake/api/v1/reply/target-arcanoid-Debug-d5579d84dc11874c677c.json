@@ -59,7 +59,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/mirexcool/CLionProjects/arcanoid/Framework"
+					"path" : "/home/mirexcool/CLionProjects/arcanoid777/Framework"
 				}
 			],
 			"language" : "CXX",
@@ -91,7 +91,7 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/home/mirexcool/CLionProjects/arcanoid/Framework",
+				"fragment" : "-Wl,-rpath,/home/mirexcool/CLionProjects/arcanoid777/Framework",
 				"role" : "libraries"
 			},
 			{

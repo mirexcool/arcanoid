@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "arcanoid::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-arcanoid-Debug-dc4a5ac4263deaad0dc6.json",
+					"jsonFile" : "target-arcanoid-Debug-d5579d84dc11874c677c.json",
 					"name" : "arcanoid",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/mirexcool/CLionProjects/arcanoid/cmake-build-debug",
-		"source" : "/home/mirexcool/CLionProjects/arcanoid"
+		"build" : "/home/mirexcool/CLionProjects/arcanoid777/cmake-build-debug",
+		"source" : "/home/mirexcool/CLionProjects/arcanoid777"
 	},
 	"version" : 
 	{
