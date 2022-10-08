@@ -36,12 +36,12 @@ class MyFramework : public Framework {
 
     const int BRICK_SEP = 25;
     const int BRICK_Y_OFFSET = 50;
-    const int RACKET_Y_OFFSET = RACKET_HEIGHT + 25;
+    const int RACKET_Y_OFFSET = RACKET_HEIGHT + 100;
 
     int BRICK_WIDTH;
     int BRICK_HEIGHT = 25;
 
-    int WINDOW_WIDTH, WINDOW_HEIGHT;
+    int WINDOW_WIDTH = 0, WINDOW_HEIGHT = 0;
     //racket
     Sprite *racket;
     int xRacket;
@@ -51,7 +51,7 @@ class MyFramework : public Framework {
 
     //ball
     const int BALL_RADIUS = 10;
-    const double BALL_SPEED = 5;
+    double BALL_SPEED = 10;
     bool ballIsMoving = false;
     //mouse
     int mouseX, mouseY;
@@ -85,16 +85,27 @@ public:
                 WINDOW_HEIGHT = stoi(token);
             i++;
         }
+        if (i < 2)
+        {
+            cout << "WRONG INPUT -window WIDTHxHEIGHT";
+            exit(1);
+        }
     }
 
     MyFramework() {
-        WINDOW_WIDTH = 600;
-        WINDOW_HEIGHT = 800;
+        WINDOW_WIDTH = 1000;
+        WINDOW_HEIGHT = 1000;
     }
 
     virtual void PreInit(int &width, int &height, bool &fullscreen) {
-        width = WINDOW_WIDTH;
-        height = WINDOW_HEIGHT;
+        if (WINDOW_WIDTH > 0 && WINDOW_HEIGHT > 0) {
+            width = WINDOW_WIDTH;
+            height = WINDOW_HEIGHT;
+        }
+        else{
+            width = 1000;
+            height = 1000;
+        }
         mouseX = 0;
         mouseY = 0;
 
@@ -167,6 +178,8 @@ public:
             double mod = sqrt(xVec * xVec + yVec * yVec);
             ball[index].vX = xVec * BALL_SPEED / mod;
             ball[index].vY = yVec * BALL_SPEED / mod;
+            if (ball[index].vX == 0)
+                ball[index].vX = 1;
         } else {
             if (randomBool() && !onMouseWay)
                 ball[index].vX = rand() % (int) BALL_SPEED + 1;
@@ -198,16 +211,14 @@ public:
             if (ball[i].sprite != nullptr) {
                 drawSprite(ball[i].sprite, ball[i].x, ball[i].y);
                 //CheckBallSpeed(i);
-                if (ballToMove % 5 == 0)
+                if (ballToMove % (int)BALL_SPEED == 0) {
                     BallMoving(i);
+                    ballToMove = 0;
+                }
             }
         }
         RacketMoving();
-
-
         MoveBricks();
-        if (ballToMove % 5 == 0)
-            ballToMove = 0;
         ballToMove++;
         if (CheckGameOver())
             return true;
@@ -256,9 +267,10 @@ public:
                 }
             }
         }
+        // moving bonus
         if (bonus->sprite != nullptr) {
             bonus->y++;
-            if (bonus->y >= yRacket && bonus->y <= yRacket + RACKET_HEIGHT) {
+            if (bonus->y + BALL_RADIUS * 4 >= yRacket && bonus->y <= yRacket + RACKET_HEIGHT) {
                 if (bonus->x >= xRacket && bonus->x <= xRacket + RACKET_WIDTH) {
                     destroySprite(bonus->sprite);
                     bonus->sprite = nullptr;
